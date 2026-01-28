@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedant Surkar - Java Backend Developer</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/responsive.css}">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-content">
+            <a href="/" class="logo">
+                <span>VS</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="menu-icon">☰</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-name">Vedant Surkar</h1>
+                <h2 class="hero-title">Java Backend Developer | Spring Boot</h2>
+                <p class="hero-tagline">Building scalable backend systems with clean architecture and robust APIs</p>
+                <div class="hero-buttons">
+                    <a href="https://github.com/vedantsurkar" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/vedant-surkar-b054911b6/" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="/files/resume.pdf" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Resume
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-snippet">
+                        <pre><code>@RestController
+@RequestMapping("/api")
+public class ProjectController {
+    @Autowired
+    private ProjectService projectService;
+
+    @GetMapping("/projects")
+    public ResponseEntity&lt;List&lt;Project&gt;&gt; getProjects() {
+        return ResponseEntity.ok(projectService.findAll());
+    }
+
+    @PostMapping("/projects")
+    public ResponseEntity&lt;Project&gt; createProject(@RequestBody Project project) {
+        return ResponseEntity.status(HttpStatus.CREATED)
+            .body(projectService.save(project));
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="about-content">
+            <p class="about-text">
+                I am a passionate Java Backend Developer and final-year Electronics & Telecommunication Engineering student with hands-on experience in Spring Boot, REST APIs, and MySQL. I enjoy designing clean backend architectures, building scalable APIs, and solving complex problems with efficient solutions. Currently seeking Java Backend / Spring Boot opportunities to contribute to meaningful projects.
+            </p>
+            <div class="about-highlights">
+                <div class="highlight-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Final Year E&TC Student</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-code"></i>
+                    <span>Spring Boot Specialist</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-search"></i>
+                    <span>Seeking Backend Opportunities</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Technologies and tools I work with</p>
+        </div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3 class="category-title">Backend</h3>
+                <div class="skill-items">
+                    <div class="skill-item">Java</div>
+                    <div class="skill-item">Spring Boot</div>
+                    <div class="skill-item">Spring Data JPA</div>
+                    <div class="skill-item">Hibernate</div>
+                    <div class="skill-item">REST APIs</div>
+                    <div class="skill-item">Maven</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3 class="category-title">Database</h3>
+                <div class="skill-items">
+                    <div class="skill-item">MySQL</div>
+                    <div class="skill-item">SQL</div>
+                    <div class="skill-item">Database Design</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3 class="category-title">Tools & Others</h3>
+                <div class="skill-items">
+                    <div class="skill-item">Git & GitHub</div>
+                    <div class="skill-item">Postman</div>
+                    <div class="skill-item">IntelliJ IDEA</div>
+                    <div class="skill-item">Docker</div>
+                    <div class="skill-item">Linux</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Projects</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">My recent work and contributions</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">SmartLPD – Smart License Plate Detection</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">REST APIs</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Role-based backend system with REST APIs for fine management and data processing. Implemented secure authentication, database operations, and role-based access control.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/vedantsurkar/my-SmartLpd_website-project" target="_blank" class="btn btn-small btn-outline">
+                        <i class="fab fa-github"></i> GitHub Repo
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Smart Vehicle Number Plate Detection</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">YOLOv8</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Real-time number plate detection with OCR-based text extraction. Developed using deep learning models for accurate plate detection and character recognition.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/vedantsurkar" target="_blank" class="btn btn-small btn-outline">
+                        <i class="fab fa-github"></i> GitHub Repo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Experience</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="experience-timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Backend Developer Intern</h3>
+                        <span class="timeline-company">Smartkey LLP</span>
+                        <span class="timeline-duration">Remote • 2023</span>
+                    </div>
+                    <p class="timeline-description">
+                        Worked on backend services using Java and Spring Boot. Built REST APIs and database operations using JPA. Contributed to optimizing database queries and improving API response times by 30%.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Currently seeking Java Backend / Spring Boot opportunities</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-links">
+                <a href="#" class="contact-link email-link" data-email="vedantsurkar724@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span class="email-text">vedantsurkar724@gmail.com</span>
+                    <span class="copy-message" style="display: none;">Copied!</span>
+                </a>
+                <a href="https://www.linkedin.com/in/vedant-surkar-b054911b6/" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/vedantsurkar" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Vedant Surkar</h3>
+                <p class="footer-text">Java Backend Developer specializing in Spring Boot and scalable API development.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/files/resume.pdf" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Connect</h4>
+                <div class="social-links">
+                    <a href="https://github.com/vedantsurkar" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vedant-surkar-b054911b6/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:vedantsurkar724@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">
+                &copy; <span class="current-year">2024</span> Vedant Surkar. All rights reserved.
+            </p>
+            <p class="footer-note">Built with Spring Boot & Java 21</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

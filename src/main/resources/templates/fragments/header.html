@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title} + ' | Vedant Surkar - Java Backend Developer'">Home | Vedant Surkar</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Java Backend Developer specializing in Spring Boot, REST APIs, and scalable systems. Final year E&TC student seeking backend opportunities.">
+    <meta name="keywords" content="Java Developer, Spring Boot, Backend Developer, REST APIs, Portfolio">
+    <meta name="author" content="Vedant Surkar">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/responsive.css}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" th:href="@{/favicon.ico}">
+</head>
+</html>
